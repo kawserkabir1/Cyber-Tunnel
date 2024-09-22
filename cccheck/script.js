@@ -58,7 +58,7 @@ checkBtn.addEventListener("click", function () {
     // CORRECTED LOGIC:
     // 1. Perform Luhn check FIRST
     if (!isValidCreditCard(cardNumber)) {
-      muradList.push(`<span style='color:grey; font-weight:bold;'>Invalid (Luhn Check)</span> | ${line} /OshekherO`);
+      muradList.push(`<span style='color:grey; font-weight:bold;'>Invalid (Luhn Check)</span> | ${line} / K4BIR`);
       // If invalid, continue to the next card
       continue; 
     }
