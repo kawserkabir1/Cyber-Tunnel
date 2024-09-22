@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: hacked;
-  src: url(./assets/fonts/font.ttf);
+  src: url(./font.ttf);
 }
 
 :root {
