@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <style>
+   html{
+     background: rgb(24,50,79); 
+     background-color: radial-gradient(circle, rgba(24,50,79,1) 42%, rgba(2,0,36,1) 100%);
+   }
+     body{
+       /* background: rgb(24,50,79); background: radial-gradient(circle, rgba(24,50,79,1) 42%, rgba(2,0,36,1) 100%); */
+     }
+   </style>
+  <title>Star Gen - Random Credit Card Generator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" />
+  
+  <style>
+a,button{background-color:transparent}body,h1,h4,h5,p,pre,ul{margin:0}.form-checkbox,.form-select{-webkit-print-color-adjust:exact;color-adjust:exact}.block,details,main{display:block}h1{font-size:2em}code,pre{font-size:1em}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}button,input,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}.overflow-auto,textarea{overflow:auto}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}textarea{resize:vertical}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}.hidden,[hidden],template{display:none}.form-checkbox,.inline-block{display:inline-block}button{background-image:none}button:focus{outline:dotted 1px;outline:-webkit-focus-ring-color auto 5px}ul{list-style:none;padding:0}html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}.form-input,.form-select,.form-textarea{-webkit-appearance:none;-moz-appearance:none;border-color:#a0aec0;border-width:2px;border-radius:.25rem;font-size:1rem;line-height:1.5;box-shadow:none;background-color:#fff;font-weight:500}img{border-style:solid;max-width:100%;height:auto}input::-moz-placeholder,textarea::-moz-placeholder{color:#a0aec0}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#a0aec0}input::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#a0aec0}input::placeholder,textarea::placeholder{color:#a0aec0}.cursor-pointer,[role=button],button{cursor:pointer}h1,h4,h5{font-size:inherit;font-weight:inherit}button,input,select,textarea{padding:0;line-height:inherit;color:inherit}code,pre{font-family:SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}img,svg{display:block;vertical-align:middle}.container,.w-full{width:100%}.form-input,.form-textarea{appearance:none;padding:.5rem .75rem}.form-input::-moz-placeholder{color:#a0aec0;opacity:1}.form-input:-ms-input-placeholder{color:#a0aec0;opacity:1}.form-input::-ms-input-placeholder{color:#a0aec0;opacity:1}.form-input::placeholder{color:#a0aec0;opacity:1}.form-input:focus,.form-select:focus,.form-textarea:focus{outline:0;box-shadow:none;border-color:#718096}.form-textarea::-moz-placeholder{color:#a0aec0;opacity:1}.form-textarea:-ms-input-placeholder{color:#a0aec0;opacity:1}.form-textarea::-ms-input-placeholder{color:#a0aec0;opacity:1}.form-textarea::placeholder{color:#a0aec0;opacity:1}.form-select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%234a5568' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z'/%3E%3C/svg%3E");appearance:none;background-repeat:no-repeat;padding:.5rem 2.5rem .5rem .75rem;background-position:right .5rem center;background-size:1.5em 1.5em}.form-select::-ms-expand{color:#a0aec0;border:none}.form-checkbox,.rounded{border-radius:.25rem}@media print and (-ms-high-contrast:active),print and (-ms-high-contrast:none){.form-select{padding-right:.75rem}}.form-checkbox{-webkit-appearance:none;-moz-appearance:none;appearance:none;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;flex-shrink:0;height:1em;width:1em;color:#4299e1;background-color:#fff;border-color:#e2e8f0;border-width:1px;box-shadow:none}.form-checkbox:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:50%;background-repeat:no-repeat}@media not print{.form-select::-ms-expand{display:none}.form-checkbox::-ms-check{border-width:1px;color:transparent;background:inherit;border-color:inherit;border-radius:inherit}}.form-checkbox:focus{outline:0;box-shadow:none;border-color:#63b3ed}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.bg-gray-500,.hover\:bg-gray-500:hover{--bg-opacity:1;background-color:#a0aec0;background-color:rgba(160,174,192,var(--bg-opacity))}.bg-gray-600,.focus\:bg-gray-600:focus{--bg-opacity:1;background-color:#718096;background-color:rgba(113,128,150,var(--bg-opacity))}.bg-red-200{--bg-opacity:1;background-color:#fed7d7;background-color:rgba(254,215,215,var(--bg-opacity))}.bg-teal-200{--bg-opacity:1;background-color:#b2f5ea;background-color:rgba(178,245,234,var(--bg-opacity))}.bg-teal-500,.hover\:bg-teal-500:hover{--bg-opacity:1;background-color:#38b2ac;background-color:rgba(56,178,172,var(--bg-opacity))}.bg-teal-600{--bg-opacity:1;background-color:#319795;background-color:rgba(49,151,149,var(--bg-opacity))}.bg-teal-800{--bg-opacity:1;background-color:#285e61;background-color:rgba(40,94,97,var(--bg-opacity))}.bg-teal-900,.hover\:bg-teal-900:hover{--bg-opacity:1;background-color:#234e52;background-color:rgba(35,78,82,var(--bg-opacity))}.focus\:bg-gray-700:focus{--bg-opacity:1;background-color:#4a5568;background-color:rgba(74,85,104,var(--bg-opacity))}.focus\:bg-teal-700:focus{--bg-opacity:1;background-color:#2c7a7b;background-color:rgba(44,122,123,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-gray-500{--border-opacity:1;border-color:#a0aec0;border-color:rgba(160,174,192,var(--border-opacity))}.border-red-400{--border-opacity:1;border-color:#fc8181;border-color:rgba(252,129,129,var(--border-opacity))}.rounded-lg{border-radius:.5rem}.rounded-full{border-radius:9999px}.border-2{border-width:2px}.border{border-width:1px}.cursor-wait{cursor:wait}.cursor-not-allowed{cursor:not-allowed}.flex{display:flex}.inline-flex{display:inline-flex}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.font-primary{font-family:Poppins,sans-serif}.font-fallback{font-family:sans-serif}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}.h-4{height:1rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-full{height:100%}.text-xs{font-size:.75rem}.text-sm{font-size:.875rem}.text-base{font-size:1rem}.text-lg{font-size:1.125rem}.text-2xl{font-size:1.5rem}.text-3xl{font-size:1.875rem}.leading-relaxed{line-height:1.625}.list-disc{list-style-type:disc}.mx-0{margin-left:0;margin-right:0}.my-2{margin-top:.5rem;margin-bottom:.5rem}.mb-3,.my-3{margin-bottom:.75rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-3{margin-top:.75rem}.mx-auto{margin-left:auto;margin-right:auto}.-mx-1{margin-left:-.25rem;margin-right:-.25rem}.-mx-2{margin-left:-.5rem;margin-right:-.5rem}.mt-0{margin-top:0}.ml-0{margin-left:0}.mt-1{margin-top:.25rem}.mr-1{margin-right:.25rem}.mt-2{margin-top:.5rem}.ml-2{margin-left:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-10{margin-top:2.5rem}.mr-10{margin-right:2.5rem}.mr-px{margin-right:1px}.mb-px{margin-bottom:1px}.-mt-1{margin-top:-.25rem}.-mt-3{margin-top:-.75rem}.-mt-20{margin-top:-5rem}.min-h-70-screen{min-height:70vh}.opacity-50{opacity:.5}.focus\:outline-none:focus{outline:0}.p-2{padding:.5rem}.p-3{padding:.75rem}.py-0{padding-top:0;padding-bottom:0}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-8{padding-left:2rem;padding-right:2rem}.container,.pl-5{padding-left:1.25rem}.py-20{padding-top:5rem;padding-bottom:5rem}.pt-1{padding-top:.25rem}.pb-10{padding-bottom:2.5rem}.pt-32{padding-top:8rem}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.resize-none{resize:none}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.fill-current{fill:currentColor}.text-center{text-align:center}.text-right{text-align:right}.hover\:text-white:hover,.text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-800{--text-opacity:1;color:#2d3748;color:rgba(45,55,72,var(--text-opacity))}.text-red-500{--text-opacity:1;color:#f56565;color:rgba(245,101,101,var(--text-opacity))}.text-teal-200{--text-opacity:1;color:#b2f5ea;color:rgba(178,245,234,var(--text-opacity))}.hover\:text-teal-500:hover,.text-teal-500{--text-opacity:1;color:#38b2ac;color:rgba(56,178,172,var(--text-opacity))}.text-teal-600{--text-opacity:1;color:#319795;color:rgba(49,151,149,var(--text-opacity))}.text-teal-700{--text-opacity:1;color:#2c7a7b;color:rgba(44,122,123,var(--text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover,.underline{text-decoration:underline}.hover\:no-underline:hover{text-decoration:none}.tracking-wide{letter-spacing:.025em}.visible{visibility:visible}.invisible{visibility:hidden}.w-4{width:1rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-10{width:2.5rem}.w-24{width:6rem}.w-32{width:8rem}.z-50{z-index:50}.transform{--transform-translate-x:0;--transform-translate-y:0;--transform-rotate:0;--transform-skew-x:0;--transform-skew-y:0;--transform-scale-x:1;--transform-scale-y:1;transform:translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))}.container{margin-left:auto;margin-right:auto;padding-right:1.25rem}.transition{transition:.2s ease-in-out}.form-input{height:46px}@media (min-width:640px){.container{max-width:640px}.sm\:inline-block{display:inline-block}.sm\:h-full{height:100%}.sm\:mt-0{margin-top:0}.sm\:w-auto{width:auto}.sm\:w-1\/2{width:50%}}@media (min-width:768px){.container{max-width:768px}.md\:mt-0{margin-top:0}.md\:w-1\/2{width:50%}}@media (min-width:1024px){.container{max-width:1024px}.lg\:ml-1,.lg\:mx-1{margin-left:.25rem}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:mx-1{margin-right:.25rem}.lg\:mt-0{margin-top:0}.lg\:w-auto{width:auto}.lg\:w-1\/2{width:50%}}@media (min-width:1280px){.container{max-width:1280px}.xl\:w-2\/5{width:40%}}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#fff;z-index:999999}
+  </style>
+  <meta name="theme-color" content="#ffffff" />
+ </head>
+
+ <body>
+  <div data-server-rendered="true" id="__nuxt">
+   <div id="__layout">
+    <div class="font-primary">
+     <div class="transition bg-teal-800 py-3 fixed z-50 shadow w-full mt-0" style="background:rgba(24,50,79,0.3);backdrop-filter: blur(10px);">
+      <div class="container">
+       <div class="flex flex-wrap justify-between items-center">
+        <a href="/">
+         <span class="flex items-center">
+          <span class="text-white font-semibold tracking-wide text-teal-200"><img src="./logo.svg" alt="./"></span>
+         </span>
+        </a>
+        <div class="block lg:hidden">
+         <button style="color: #a0aec0;" class="flex items-center px-3 py-2 focus:outline-none" id="codehapBTN">
+          <svg style="color: #a0aec0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 fill-current text-white">
+           <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+          </svg>
+         </button>
+        </div>
+        
+        <style>
+          a.newhov:hover{
+            background: rgba(0,0,0,.1);
+          }
+        </style>
+        
+        <div id="ch" style="background: transparent; color: #fff;" class="mt-5 lg:mt-0 w-full lg:w-auto block lg:flex text-sm font-medium tracking-wide hidden">
+         <a href="/" class="newhov block px-5 py-3 mx-0 lg:mx-1 rounded focus:outline-none">
+          Generate CC
+         </a>
+         
+         <a href="/lorem-ipsum" class=" newhov block px-5 py-3 mx-0 lg:mx-1 mt-1 lg:mt-0 rounded focus:outline-none">
+          Generate Lorem
+         </a>
+
+         <a href="/users" class="newhov block px-5 py-3 mx-0 lg:mx-1 mt-1 lg:mt-0 rounded focus:outline-none">
+          Generate User
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <main id="main" class="pb-10 pt-32 text-gray-600">
+      <div class="container min-h-70-screen">
+       <div class="min-h-70-screen">
+        <div class="text-center">
+         <h1 style="background: rgb(93,103,116);
+background: radial-gradient(circle, rgba(93,103,116,1) 28%, rgba(24,50,79,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-3xl font-bold text-gray-700">Random Test Credit Card Numbers Generator</h1>
+         <p style="color: radial-gradient(circle, rgba(93,103,116,1);" class="my-3">
+          Star Gen provides a live credit card generator, instantly producing valid credit card numbers. Ideal for testing purposes in the technology field, these algorithm-generated cards offer a convenient solution for various
+          verification needs.
+         </p>
+        </div>
+
+        <div class="flex flex-wrap -mx-2 mt-5 text-gray-700">
+         <div class="w-full sm:w-1/2 px-2">
+          <form id="codehap">
+           <input type="hidden" name="type" value="3" />
+           <div>
+            <label class="block cursor-pointer relative">
+             <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">BIN</span>
+             <input style="background: transparent; color: #a0aec0;" placeholder="410039xxxxxxxxxx" name="bin" class="form-input block w-full" />
+            </label>
+           </div>
+           <div class="flex -mx-2 items-center">
+            <div class="px-2 mt-6">
+             <label class="flex items-center cursor-pointer"> <input type="checkbox" name="date" class="form-checkbox text-teal-700 cursor-pointer" checked /> <span class="ml-2 text-xs font-medium" style="color: #a0aec0;">DATE</span> </label>
+            </div>
+            <div class="mt-6 w-full sm:w-1/2 px-2">
+             <label class="block cursor-pointer relative">
+              <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">MONTH</span>
+              <select name="s_date" class="form-select block w-full" style="background-color: transparent; color: #a0aec0;">
+               <option value="">Random</option>
+               <option value="1"> January </option>
+               <option value="2"> Febuary </option>
+               <option value="3"> March </option>
+               <option value="4"> April </option>
+               <option value="5"> May </option>
+               <option value="6"> June </option>
+               <option value="7"> July </option>
+               <option value="8"> August </option>
+               <option value="9"> September </option>
+               <option value="10"> October </option>
+               <option value="11"> November </option>
+               <option value="12"> December </option>
+              </select>
+             </label>
+            </div>
+            <div class="mt-6 w-full sm:w-1/2 px-2">
+             <label class="block cursor-pointer relative">
+              <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">YEAR</span>
+              <select name="year" class="form-select block w-full" style="background-color: transparent; color: #a0aec0;">
+               <option value="">Random</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+               <option value="2027">2027</option>
+               <option value="2028">2028</option>
+               <option value="2029">2029</option>
+               <option value="2030">2030</option>
+               <option value="2031">2031</option>
+               <option value="2032">2032</option>
+              </select>
+             </label>
+            </div>
+           </div>
+           <div class="flex -mx-2 items-center">
+            <div class="px-2 mt-6">
+             <label class="flex items-center cursor-pointer"> <input name="csv" type="checkbox" class="form-checkbox text-teal-700 cursor-pointer" checked /> <span class="ml-2 text-xs font-medium" style="color: #a0aec0;">CVV</span> </label>
+            </div>
+            <div class="mt-6 w-full sm:w-1/2 px-2">
+             <label class="block cursor-pointer relative">
+              <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">CVV</span>
+              <input style="color: #a0aec0; background: transparent;" name="s_csv" placeholder="Leave blank to randomize" class="form-input block w-full" />
+             </label>
+            </div>
+            <div class="mt-6 w-full sm:w-1/2 px-2">
+             <label class="block cursor-pointer relative">
+              <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">QUANTITY</span>
+              <input style="background-color: transparent; color: #a0aec0;" name="number" value="10" type="text" class="form-input block w-full" />
+             </label>
+            </div>
+           </div>
+           <div class="mt-6">
+            <label class="block cursor-pointer relative">
+             <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">FORMAT</span>
+             <select style="background-color: transparent; color: #a0aec0;" name="format" class="form-select block w-full">
+              <option value="pipe"> PIPE </option>
+              <option value="json"> JSON </option>
+             </select>
+            </label>
+           </div>
+           <div class="mt-6">
+            <button type="submit" id="submit" class="flex items-center justify-center shadow-md bg-teal-600 text-white font-medium w-full rounded py-3 hover:bg-teal-500 focus:bg-teal-700 focus:outline-none">
+             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current w-6 h-6 mr-1">
+              <path
+               d="M6.80003 3.45C7.67003 2.93 8.62003 2.53 9.63003 2.28C9.79674 2.77655 10.1152 3.2082 10.5404 3.514C10.9657 3.81981 11.4762 3.98432 12 3.98432C12.5238 3.98432 13.0344 3.81981 13.4596 3.514C13.8849 3.2082 14.2033 2.77655 14.37 2.28C15.38 2.53 16.33 2.93 17.19 3.45C16.9519 3.92008 16.8683 4.45341 16.9513 4.9738C17.0344 5.4942 17.2797 5.97505 17.6524 6.34768C18.025 6.7203 18.5058 6.96565 19.0262 7.04868C19.5466 7.13171 20.0799 7.04817 20.55 6.81C21.07 7.67 21.47 8.61 21.72 9.63C21.2235 9.7967 20.7918 10.1152 20.486 10.5404C20.1802 10.9657 20.0157 11.4762 20.0157 12C20.0157 12.5238 20.1802 13.0343 20.486 13.4596C20.7918 13.8848 21.2235 14.2033 21.72 14.37C21.47 15.38 21.07 16.33 20.55 17.19C20.0799 16.9518 19.5466 16.8683 19.0262 16.9513C18.5058 17.0343 18.025 17.2797 17.6524 17.6523C17.2797 18.025 17.0344 18.5058 16.9513 19.0262C16.8683 19.5466 16.9519 20.0799 17.19 20.55C16.33 21.07 15.39 21.47 14.37 21.72C14.2033 21.2234 13.8849 20.7918 13.4596 20.486C13.0344 20.1802 12.5238 20.0157 12 20.0157C11.4762 20.0157 10.9657 20.1802 10.5404 20.486C10.1152 20.7918 9.79674 21.2234 9.63003 21.72C8.62003 21.47 7.67003 21.07 6.81003 20.55C7.0482 20.0799 7.13174 19.5466 7.04871 19.0262C6.96568 18.5058 6.72034 18.025 6.34771 17.6523C5.97508 17.2797 5.49423 17.0343 4.97383 16.9513C4.45344 16.8683 3.92011 16.9518 3.45003 17.19C2.91713 16.3159 2.52248 15.3646 2.28003 14.37C2.77658 14.2033 3.20823 13.8848 3.51403 13.4596C3.81984 13.0343 3.98435 12.5238 3.98435 12C3.98435 11.4762 3.81984 10.9657 3.51403 10.5404C3.20823 10.1152 2.77658 9.7967 2.28003 9.63C2.53003 8.62 2.93003 7.67 3.45003 6.81C3.92011 7.04817 4.45344 7.13171 4.97383 7.04868C5.49423 6.96565 5.97508 6.7203 6.34771 6.34768C6.72034 5.97505 6.96568 5.4942 7.04871 4.9738C7.13174 4.45341 7.0482 3.92008 6.81003 3.45H6.80003ZM12 16C13.0609 16 14.0783 15.5786 14.8285 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8285 9.17157C14.0783 8.42143 13.0609 8 12 8C10.9392 8 9.92175 8.42143 9.1716 9.17157C8.42146 9.92172 8.00003 10.9391 8.00003 12C8.00003 13.0609 8.42146 14.0783 9.1716 14.8284C9.92175 15.5786 10.9392 16 12 16Z"
+               fill="white"
+              ></path>
+              <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="white"></path>
+             </svg>
+             Generate
+            </button>
+
+            <div class="wait-loading mt-2" style="display: none;">
+             <button type="submit" id="submit" class="flex items-center justify-center shadow-md bg-teal-600 text-white font-medium w-full rounded py-3 hover:bg-teal-500 focus:bg-teal-700 focus:outline-none">
+              <svg
+               xmlns:svg="http://www.w3.org/2000/svg"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               version="1.0"
+               class="fill-current mr-1"
+               width="19px"
+               height="19px"
+               viewBox="0 0 128 128"
+               xml:space="preserve"
+              >
+               <g>
+                <path
+                 fill="white"
+                 d="M116.7 66.28a52.86 52.86 0 0 1-1 8.18l9.8 7.57-1.78 4.67-1.77 4.67-12.36-.82a52.87 52.87 0 0 1-4.7 6.7L110 108.5l-3.75 3.3-3.75 3.32L92 108.67a52.6 52.6 0 0 1-7.45 3.9l-.66 12.3-4.87 1.2-4.86 1.2-6.38-10.66q-1.9.2-3.88.2-2.15 0-4.25-.14l-6.3 10.64-4.84-1.2-4.85-1.2-.7-12.43a52.6 52.6 0 0 1-6.7-3.5l-10.6 6.64-3.75-3.3-3.76-3.3 5.05-11.4a52.88 52.88 0 0 1-4.73-6.73l-12.34.9-1.8-4.66-1.8-4.67 9.7-7.67a52.8 52.8 0 0 1-1-8.05l-11.4-5 .56-4.95.54-4.97 12.26-2.3a52.37 52.37 0 0 1 2.94-7.83L8.4 32l2.8-4.14 2.8-4.14 12 3.68a53.06 53.06 0 0 1 6-5.33L29.57 9.8l4.4-2.37 4.43-2.35 8.95 8.86a52.4 52.4 0 0 1 8-1.98L59 0h10l3.66 11.96a52.4 52.4 0 0 1 7.8 1.9L89.26 5l4.42 2.3 4.43 2.34-2.3 12.27a52.98 52.98 0 0 1 6.2 5.5l11.9-3.7 2.9 4.1 2.84 4.1-7.8 9.8a52.34 52.34 0 0 1 2.86 7.5l12.3 2.17.6 4.96.57 4.95zM41 64a23 23 0 1 0 23-23 23 23 0 0 0-23 23z"
+                />
+                <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="27.69 64 64" dur="600ms" repeatCount="indefinite"></animateTransform>
+               </g>
+              </svg>
+              In Progress..
+             </button>
+            </div>
+           </div>
+          </form>
+         </div>
+         <div class="w-full sm:w-1/2 px-2">
+          <div class="sm:h-full mt-6 sm:mt-0">
+           <label class="block cursor-pointer relative h-full relative">
+            <span class="text-gray-600 font-medium text-xs absolute bg-white px-3 pt-1 ml-2 -mt-3" style="background: transparent; backdrop-filter: blur(10px); color: #a0aec0; border: 1px solid #a0aec0; text-align: center;">RESULT</span>
+            <textarea style="background-color: transparent; color: #a0aec0;" id="result" rows="5" placeholder="xxxxxxxxxx" class="show-result form-textarea block w-full h-full resize-none font-fallback font-bold tracking-wide"></textarea>
+            <button type="button" class="btn-clip bg-gray-500 px-2 py-1 absolute bottom-0 right-0 mb-px mr-px focus:outline-none focus:bg-gray-600">
+             <span class="tooltip invisible absolute top-0 right-0 mr-10 -mt-1 w-32 py-1 text-center block text-white text-xs rounded-full bg-gray-600">Copy to clipboard</span>
+             <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" class="fill-current w-4 h-4 text-white">
+              <path
+               d="M3.50004 1.16666H7.00004V4.66666C7.00004 5.30833 7.52504 5.83333 8.16671 5.83333H11.6667V11.6667C11.6667 11.9761 11.5438 12.2728 11.325 12.4916C11.1062 12.7104 10.8095 12.8333 10.5 12.8333H3.50004C3.19062 12.8333 2.89388 12.7104 2.67508 12.4916C2.45629 12.2728 2.33337 11.9761 2.33337 11.6667V2.33333C2.33337 1.69166 2.85837 1.16666 3.50004 1.16666ZM4.66671 7.58333C4.512 7.58333 4.36362 7.64479 4.25423 7.75419C4.14483 7.86358 4.08337 8.01195 4.08337 8.16666C4.08337 8.32137 4.14483 8.46975 4.25423 8.57914C4.36362 8.68854 4.512 8.75 4.66671 8.75H9.33337C9.48808 8.75 9.63646 8.68854 9.74585 8.57914C9.85525 8.46975 9.91671 8.32137 9.91671 8.16666C9.91671 8.01195 9.85525 7.86358 9.74585 7.75419C9.63646 7.64479 9.48808 7.58333 9.33337 7.58333H4.66671ZM4.66671 9.91667C4.512 9.91667 4.36362 9.97812 4.25423 10.0875C4.14483 10.1969 4.08337 10.3453 4.08337 10.5C4.08337 10.6547 4.14483 10.8031 4.25423 10.9125C4.36362 11.0219 4.512 11.0833 4.66671 11.0833H7.00004C7.15475 11.0833 7.30312 11.0219 7.41252 10.9125C7.52191 10.8031 7.58337 10.6547 7.58337 10.5C7.58337 10.3453 7.52191 10.1969 7.41252 10.0875C7.30312 9.97812 7.15475 9.91667 7.00004 9.91667H4.66671Z"
+              ></path>
+              <path d="M8.16663 1.16666L11.6666 4.66666H8.16663V1.16666Z"></path>
+             </svg>
+            </button>
+           </label>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+
+     <footer style="background: transparent;" class="py-8 bg-gray-100">
+      <div class="container text-center">
+       <div class="text-sm text-gray-600">
+        <p>Made with 💜 by <a href="https://t.me/K4BIRR">K4BIRR</a> in BD</p>
+       </div>
+       <p class="text-xs text-gray-500">Copyright © <span> Cyber Tunnel</span> - 2024</p>
+      </div>
+     </footer>
+    </div>
+   </div>
+  </div>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+function generateCardNumber(bin) {
+    let desiredLength;
+    
+    // Determine desired length based on BIN
+    if (bin.startsWith('34') || bin.startsWith('37')) {
+        desiredLength = 15; // American Express
+    } else if (['5018', '5020', '5038', '5893', '6304', '6759', '6761', '6762', '6763'].some(prefix => bin.startsWith(prefix))) {
+        desiredLength = 19; // Some Maestro cards
+    } else {
+        desiredLength = 16; // Most other cards (Visa, Mastercard, etc.)
+    }
+
+    let cardNumber = bin;
+    while (cardNumber.length < desiredLength - 1) {
+        cardNumber += Math.floor(Math.random() * 10);
+    }
+
+    let sum = 0;
+    let alternate = false;
+    for (let i = cardNumber.length - 1; i >= 0; i--) {
+        let n = parseInt(cardNumber.charAt(i));
+        if (alternate) {
+            n *= 2;
+            if (n > 9) {
+                n = (n % 10) + 1;
+            }
+        }
+        sum += n;
+        alternate = !alternate;
+    }
+    let checkDigit = (10 - (sum % 10)) % 10;
+    return cardNumber + checkDigit;
+}
+
+function generateCVV(cardNumber) {
+    return cardNumber.startsWith('34') || cardNumber.startsWith('37') 
+           ? Math.floor(Math.random() * 9000) + 1000  // 4-digit CVV for Amex
+           : Math.floor(Math.random() * 900) + 100;   // 3-digit CVV for others
+}
+
+$(document).ready(function() {
+  $('#codehap').submit(function(e) {
+    e.preventDefault();
+    
+    $('.wait-loading').show();
+    $('#submit').hide();
+
+    var bin = $('input[name="bin"]').val();
+    var quantity = parseInt($('input[name="number"]').val());
+    var includeDate = $('input[name="date"]').is(':checked');
+    var includeCSV = $('input[name="csv"]').is(':checked');
+    var month = $('select[name="s_date"]').val();
+    var year = $('select[name="year"]').val();
+    var csv = $('input[name="s_csv"]').val();
+    var format = $('select[name="format"]').val();
+
+    var cards = [];
+    for (var i = 0; i < quantity; i++) {
+      var cardNumber = generateCardNumber(bin);
+      var card = {
+        number: cardNumber,
+        month: includeDate ? (month ? parseInt(month) : Math.floor(Math.random() * 12) + 1) : undefined,
+        year: includeDate ? (year ? parseInt(year) : Math.floor(Math.random() * 9) + 2024) : undefined,
+        cvv: includeCSV ? (csv ? csv : generateCVV(cardNumber)) : undefined
+      };
+      
+      // Remove undefined properties
+      Object.keys(card).forEach(key => card[key] === undefined && delete card[key]);
+      
+      cards.push(card);
+    }
+
+    var result = '';
+    switch (format) {
+      case 'pipe':
+        result = cards.map(c => Object.values(c).join('|')).join('\n');
+        break;
+      case 'json':
+        result = JSON.stringify(cards, null, 2);
+        break;
+    }
+
+    $('#result').val(result);
+    
+    $('.wait-loading').hide();
+    $('#submit').show();
+  });
+
+  $('.btn-clip').click(function() {
+    var resultText = $('#result').val();
+    navigator.clipboard.writeText(resultText).then(function() {
+      $('.tooltip').removeClass('invisible').addClass('visible');
+      setTimeout(function() {
+        $('.tooltip').removeClass('visible').addClass('invisible');
+      }, 2000);
+    });
+  });
+
+  $('#codehapBTN').click(function() {
+    $('#ch').toggleClass('hidden');
+  });
+});
+</script>  
+ </body>
+</html>
