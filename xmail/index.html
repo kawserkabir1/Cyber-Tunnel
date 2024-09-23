@@ -1,0 +1,89 @@
+<!--------------------------------
+    Author: Kabir
+    Created: 23 SEP 2024
+    Last Updated: 23 SEP 2024
+-------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TempMail</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//cdn.repl.email/styles/water.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <script src="api.js"></script>
+
+    <script id="_wau776">
+      var _wau = _wau || [];
+      _wau.push(["dynamic", "0pakxqe3b2", "776", "c4302bffffff", "small"]);
+    </script>
+    <script async src="//waust.at/d.js"></script>
+    <!-- Add favicon -->
+    <link rel="icon" href="images/temp-mail-icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="ascii-art">
+        <pre>
+88  dP   dP88  88""Yb 88 88""Yb 
+88odP   dP 88  88__dP 88 88__dP 
+88"Yb  d888888 88""Yb 88 88"Yb  
+ 88  Yb     88  88oodP 88 88  Yb  
+    </pre>
+      </div>
+    </header>
+    <div id="popupNotification" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p class="main">Welcome to Xmail!</p>
+        <p class="label">
+         Do not refresh page. If you refresh page your mail will be disappeared.
+         Click on <b style="color: red;"> Load Mail </b> Button to recieve an email. Xmail is a web based 
+         temporary email service which uses 1secmail's api.</p>
+
+        <p class="main" style="font-size: 0.75rem !important">
+          &copy; 2024 K4BIR &mdash; Cyber Tunnel
+        </p>
+      </div>
+    </div>
+    <div class="horizontalContainer">
+      <input id="addr" placeholder="email address" />
+      <button onclick="refreshMail()">Load Mail</button>
+      <button onclick="genEmail()">New Address</button>
+    </div>
+    <table id="emails"></table>
+
+    <footer>
+     &copy; K4BIR 2024 &mdash; TempMail
+      <a href="https://1secmail.com/" target="_blank" style="color: aliceblue;">1sec mail </a>
+      <div class="social">
+        <p>Version 1.0</p>
+      </div>
+
+      <button class="warning-button" onclick="warningAlert()">
+        ⚠️ Warning Note ⚠️
+      </button>
+    </footer>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="api.js"></script>
+
+    <script>
+      window.onload = function () {
+        document.getElementById("popupNotification").style.display = "block";
+      };
+
+      function closePopup() {
+        document.getElementById("popupNotification").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
