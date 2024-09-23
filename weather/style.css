@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle, #4d4d4d, #3a3a3a, #292929, #181818, #000000);
+
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgb(181 184 183), rgb(91, 84, 138));
+    color: #fff;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 8px;
+    font-size: 18px;
+
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+}
+
+.search button img {
+    width: 25px;
+}
+
+.wheather-img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+
+
+}
+
+.wheather h1 {
+    font-size: 80px;
+    font-weight: 500;
+
+}
+
+.wheather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 55px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.humidity-para,
+.wind-para {
+    font-size: 20px;
+
+}
+
+.wheather {
+    display: none;
+}
+
+.error {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    background-color: #fe0000d9;
+    height: 25px;
+    display: none;
+    border-radius: 10px;
+    width: 82%;
+
+}
+
+.error p {
+    font-size: 20px;
+}
