@@ -621,43 +621,70 @@ Main Button
 color: #fff;
 background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 border-color: none;
-animation: blink 5s infinite;
+z-index: 1;
+background-size: 400%;
 }
 
-@keyframes blink{
-  0%{
-    background: rgb(113, 95, 203);
-background: radial-gradient(circle, rgba(113, 95, 203, 1) 11%, rgba(4, 46, 145, 1) 77%);
+.btn-primary:hover {
+  animation: animate 8s linear infinite;
+	animate: 0.5s;
+	transition: 0.5s;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
   }
-  50%{
-    background: rgb(113, 95, 203);
-background: radial-gradient(circle, rgba(113, 95, 203, 1) 63%, rgba(4, 46, 145, 1) 100%);
-  }
-  100%{
-    background: rgb(4, 46, 145);
-background: radial-gradient(circle, rgba(4, 46, 145, 1) 22%, rgba(113, 95, 203, 1) 73%);
+  100% {
+    background-position: 400%;
   }
 }
- 
+
+.gradient-text{
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: animate 8s linear infinite;
+animate: 0.5s;
+transition: 0.5s;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Poppins;
+font-weight: 600;
+}
+
+.btn-primary:before{
+  animation: 0.5s;
+  transition: 0.5s;
+  content: '';
+  position: absolute;
+z-index: -1;
+background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+background-size: 400%;
+opacity: 0;
+}
+.btn-primary:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+  animate: 0.5s;
+  transition: 0.5s;
+}
 .btn-primary:focus {
 color: #fff;
 }
  
-.btn-primary:active,
-.btn-primary:hover {
+.btn-primary:active{
 color: #fff;
 }
  
-.btn-primary:active:focus,
-.btn-primary:active:hover {
+.btn-primary:active:focus{
 color: #fff;
-background: rgb(113, 95, 203);
-background: radial-gradient(circle, rgba(113, 95, 203, 1) 11%, rgba(152, 59, 158, 1) 77%);
-  
 }
  
 .btn-primary:active {
-background-image: none;
+  animation: animate 8s linear infinite;
+animate: 0.5s;
+transition: 0.5s;
 }
  
 .btn-primary[disabled]:focus,
@@ -937,8 +964,7 @@ max-width: 100%
 <body style="background: #0f172a;">
  
 <div id="app">
-    <nav class="navigations"><h2 class="title" style="font-family: Poppins; font-weight: 600;background: rgb(113,95,203);
-background: radial-gradient(circle, rgba(113,95,203,1) 11%, rgba(17,41,98,1) 77%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Cyber Gen</h2></nav>
+    <nav class="navigations"><h2 class="title gradient-text">Cyber Gen</h2></nav>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
