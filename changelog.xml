@@ -1,38 +1,47 @@
-/****************************************/
-/        Author : Cyber Tunnel           /
-/      Developer: K4BIRR                 /
-/      Dev Page : https://rbit.win/kabir /
-/   Copyright belongs to Cyber Tunnel    /
-/                                        /
-/****************************************/
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-Changelog V1.0: 
-+ Added Stargen a CC Generator
-+ Added CyberGen - CC Generator
-+ Added Nebula - Live CC Cheker
-+ Added Xmail - temporary email service
-+ Added WeathX a Weather service
-+ Added CurrencyX - currency converter
-+ Added DownX - file downloader
-+ Added Gradient Color Generator
-+ Added DownX - File Downloader
-+ Added Pixie - Image resizer
-+ Added ReadQR - QR Code reader
-+ Added Safepass - Password generator
-+ Added Safepass v2 - Password generator
-+ Added Rebrand - Lorem Ipsum generator
+    <changeSet id="1" author="your-name">
+        <createTable tableName="users">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
 
+    <changeSet id="2" author="your-name">
+        <addColumn tableName="users">
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
 
-Changelog of v1.2 - v1.4:
+    <changeSet id="3" author="your-name">
+        <createTable tableName="products">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="text"/>
+            <column name="price" type="decimal(10,2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
 
-* Fixed minor issues and changed font style, UI theme, UI color and so on. A lot of file modified and enhanced user experience.
-
-Changelog of v1.5:
-
-+ Added Random Address Generator
-+ Added Random IP Generator
-+ Added IP Address Tracker
-+ Added Device & Browser info
-* Fixed some minor issues and bugs
-* Changed UI of some services
-
+</databaseChangeLog>
