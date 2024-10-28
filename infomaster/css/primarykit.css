@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+  font-family: Poppins;
+  background: #0f172a;
+}
+.text-grad{
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: animate 8s linear infinite;
+  animate: 0.5s;
+  transition: 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-weight: 600;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.bg-grad {
+color: #fff;
+background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+border: none;
+z-index: 1;
+background-size: 400%;
+}
+
+.bg-grad:hover {
+  animation: animate 8s linear infinite;
+	animate: 0.5s;
+	transition: 0.5s;
+}
+.bg-grad:hover {
+  animation: animate 8s linear infinite;
+	animate: 0.5s;
+	transition: 0.5s;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}

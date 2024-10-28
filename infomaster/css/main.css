@@ -1,0 +1,27 @@
+/* Add your custom CSS styles here */
+body{
+  font-family: Poppins;
+  background: #0f172a;
+}
+.tab-content{
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+#device-info, 
+#browser-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1rem;
+}
+h1{
+  font-family: Poppins;
+}
+.nav-link{
+  color: #fff;
+}
+a{
+  color: #f441a5;
+  text-decoration: none;
+}
